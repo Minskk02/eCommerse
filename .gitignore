@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# Processed data cache
+data/*.parquet
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Kaggle cache
+~/.cache/kagglehub/
+
+# Output files
+result.csv
+
+# Raw dataset
+*.csv
+
+# macOS system files
+.DS_Store
