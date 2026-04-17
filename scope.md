@@ -9,31 +9,32 @@ Shipping_Days, Payment_Method, Order_Status
 
 ---
 
-## Objectives
+## Why ML was dropped
+EDA revealed the dataset is fully synthetic with Order_Status randomly assigned independent
+of all features. ANOVA tests showed only Category has meaningful effect on Revenue (p≈0.000),
+all other columns (Season, Region, Gender, Segment, Shipping_Method) are noise. The dataset
+is not suitable for predictive modeling but is well-structured for visualization practice.
 
-### 1. Exploratory Data Analysis (EDA)
-- Distribution plots for all numerical columns
-- Identify skewed columns and apply log/sqrt compression where appropriate
-- Correlation heatmap
-- Category-level breakdowns (revenue, quantity, profit by category/region/season)
-- Outlier detection
+## Objectives — Data Visualisation
 
-### 2. Feature Engineering
-- Compress skewed numeric columns (e.g. log transform on Unit_Price, Revenue, Cost)
-- Bin continuous variables into tiers where useful (e.g. price tiers)
-- Extract temporal features from Order_Date (day_of_week, is_weekend, etc.)
-- Identify and drop leaky columns before model training
+### 1. Distribution Analysis
+- Histograms + log-compressed comparisons for skewed numeric columns
+- Boxplots / violin plots across categories
 
-### 3. Encoding
-- OrdinalEncoder for ordered categoricals (Month, Quarter, Season)
-- OneHotEncoder for low-cardinality nominals (Region, Gender, Shipping_Method)
-- TargetEncoder for high-cardinality categoricals (Country, Category, Sub_Category, Customer_Segment)
+### 2. Category & Regional Breakdown
+- Revenue and Profit by Category, Sub_Category, Region, Country
+- Bar charts, grouped comparisons
 
-### 4. Modeling (sklearn first)
-- Start with baseline: DummyRegressor/DummyClassifier
-- Try: Random Forest, Gradient Boosting, XGBoost
-- Evaluate with appropriate metrics (R², RMSE for regression; accuracy, F1 for classification)
-- Target accuracy: >90%
+### 3. Time Series
+- Revenue/Profit trends over time (monthly, quarterly, seasonal)
+- Line charts with trend lines
+
+### 4. Correlation & Relationships
+- Heatmap of numeric columns
+- Scatter plots for key relationships
+
+### 5. Dashboard-style Summary
+- A clean multi-panel figure suitable for a README or portfolio
 
 ---
 
