@@ -82,6 +82,6 @@ This is the most actionable analysis for a dropshipper: a product with high mean
 
 ## Conclusions
 
-The dataset is synthetically generated. Statistical tests (ANOVA, t-test, chi-square) found no significant relationship between Order_Status and any feature. Negative profit rates are uniform across all categories, regions, customer segments, and genders. Revenue is almost entirely explained by Category due to price differences between Electronics and other categories, not due to any demand or behavioral pattern.
+The dataset is synthetically generated. Statistical tests (ANOVA, t-test, chi-square) found no significant relationship between Order_Status and any feature. Negative profit rates are uniform across all categories, regions, customer segments, and genders. Revenue is almost entirely explained by Category due to price differences between Electronics and other categories, not due to any demand or behavioral pattern. So the initial plan of implementing a simple predictive model wasn't proceeded.
 
 Despite these limitations, the dataset served as a useful exercise in EDA methodology: distribution analysis, skew detection, population-adjusted rate comparison, correlation analysis, time series visualisation, and risk-adjusted scoring.
